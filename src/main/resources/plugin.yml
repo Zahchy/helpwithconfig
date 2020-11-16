@@ -1,0 +1,13 @@
+name: SuperCool
+version: ${project.version}
+main: me.zahchy.supercool.SuperCool
+api-version: 1.16
+commands:
+  yeetus:
+    description: Does a message based off of true or false values.
+  screload:
+    description: Reloads the config!
+  message:
+    description: Does a thing with el configuration
+  fly:
+    description: DOES A COOL THING!

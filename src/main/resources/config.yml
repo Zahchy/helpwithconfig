@@ -1,0 +1,14 @@
+####SuperCool Config made by zahchy!
+#Toggle on and off things!
+#Using true or false!
+
+
+
+
+yeetus: true
+yeetusmessage: "&c&lIm really cool!"
+yeetusmessageiffalse: "Is toggled off - Re-enable it in the config!"
+reloadmessage: "&aSuperCool Plugin has been reloaded!"
+message: true
+messagecommand: "&b&lTHIS IS A MESSAGE!"
+fly: "YESSSSSSSS!"
