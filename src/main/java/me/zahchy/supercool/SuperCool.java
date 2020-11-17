@@ -1,5 +1,6 @@
 package me.zahchy.supercool;
 
+import me.zahchy.supercool.commands.CoolMessage;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -11,8 +12,17 @@ public class SuperCool extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        getConfig().options().copyDefaults();
-        saveDefaultConfig();
+        //there is no need for #copyDefaults() when using "#saveDefaultConfig()".
+        //getConfig().options().copyDefaults();
+        saveDefaultConfig(); //this is the recommended one
+
+        //commands need to be registered
+
+        //notice how we pass "this"? It is basically the placeholder for the current instance of this class.
+        //It always refers to the class it is typed in.
+        getCommand("test").setExecutor(new CoolMessage(this));
+
+
         System.out.println(ChatColor.DARK_GREEN + "[SuperCool] has been enabled");
     }
     
@@ -20,7 +30,7 @@ public class SuperCool extends JavaPlugin {
     /*I did these here because this was the only way I knew how to access the config.
     If you could give me an example of putting these commands into seperate classes (in the commands package) that would be amazing!
     Thank you so much I truly appreciate it!
-    I made the commands package with coolmessage in it so if you could like do a message from the config in that class that would be exactly what im trying to do with
+    I made the commands package with CoolMessage in it so if you could like do a message from the config in that class that would be exactly what im trying to do with
     all these other commands i made down here!
      */
 
